@@ -42,9 +42,15 @@ module.exports = defineConfig({
           ],
         },
       },
+      {
+        resolve: "@medusajs/admin",
+        options: {
+          autoRebuild: true,
+        },
+      },
   ],
   admin: {
-    disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
+    disable: process.env.DISABLE_MEDUSA_ADMIN === "false",
     backendUrl: process.env.MEDUSA_BACKEND_URL,
 
   },
